@@ -1,0 +1,160 @@
+Executed Code snippets
+ >>> 'sales' in '101,raj,sales,pune'
+True
+>>> 'sales' in '101,raj,prod,pune'
+False
+>>>
+>>> ':' in 'root:x:bin'
+True
+>>> 'sales' in ['raj,sales,pune','leo,prod,bglore','anil,sales,hyd']
+False
+>>>
+>>> 'sales' in ['raj,sales,pune','leo,prod,bglore','anil,sales,hyd','sales']
+True
+>>>
+>>> 'prod' in '101,raj,sales,pune'
+False
+>>>
+>>> 'prod' not in '101,raj,sales,pune'
+True
+>>> n = 15
+>>> type(n)
+<class 'int'>
+>>> float(n)
+15.0
+>>> str(n)
+'15'
+>>> type(n)
+<class 'int'>
+>>> cost = 2432.56
+>>> type(cost)
+<class 'float'>
+>>> str(cost)
+'2432.56'
+>>> int(cost)
+2432
+>>> s1 = '45'
+>>> type(s1)
+<class 'str'>
+>>> int(s1) + 100
+145
+>>> int(s1) + 455.345
+500.345
+>>> int(s1) * 9.44534
+425.0403
+>>> input('Enter your name:")
+  File "<python-input-14>", line 1
+    input('Enter your name:")
+          ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> input('Enter your name:')
+Enter your name:leo
+'leo'
+>>> input('Enter the value of n:')
+Enter the value of n:45
+'45'
+>>> n = input('Enter the value of n')
+Enter the value of n45
+>>> print(n)
+45
+>>> float(n)
+45.0
+>>> type(n)
+<class 'str'>
+>>> n = input('Enter value of n')
+Enter value of n56
+>>> m = input(f'Enter {n} value of m')
+Enter 56 value of m23
+>>> 45 / 5
+9.0
+>>> 45 // 5
+9
+>>> 2 ** 3
+8
+>>> 2 ** 4
+16
+>>> 2 ** 4 ** 6
+1044388881413152506691752710716624382579964249047383780384233483283953907971557456848826811934997558340890106714439262837987573438185793607263236087851365277945956976543709998340361590134383718314428070011855946226376318839397712745672334684344586617496807908705803704071284048740118609114467977783598029006686938976881787785946905630190260940599579453432823469303026696443059025015972399867714215541693835559885291486318237914434496734087811872639496475100189041349008417061675093668333850551032972088269550769983616369411933015213796825837188091833656751221318492846368125550225998300412344784862595674492194617023806505913245610825731835380087608622102834270197698202313169017678006675195485079921636419370285375124784014907159135459982790513399611551794271106831134090584272884279791554849782954323534517065223269061394905987693002122963395687782878948440616007412945674919823050571642377154816321380631045902916136926708342856440730447899971901781465763473223850267253059899795996090799469201774624817718449867455659250178329070473119433165550807568221846571746373296884912819520317457002440926616910874148385078411929804522981857338977648103126085903001302413467189726673216491511131602920781738033436090243804708340403154190336
+>>> 3 ** 3.53
+48.33236306329384
+>>> 45 % 6
+3
+>>> 34 + 67
+101
+>>> 45 - 24
+21
+>>> 45 * 6
+270
+>>> "Python" + "project"
+'Pythonproject'
+>>> "Project" + 3
+Traceback (most recent call last):
+  File "<python-input-34>", line 1, in <module>
+    "Project" + 3
+    ~~~~~~~~~~^~~
+TypeError: can only concatenate str (not "int") to str
+>>> "python" + str(4)
+'python4'
+>>> "python" + str(4.5)
+'python4.5'
+>>> s='python'
+>>> len(s)
+6
+>>> s[0]
+'p'
+>>> s[1]
+'y'
+>>> s[-1]
+'n'
+>>> s[-2]
+'o'
+>>> s="python is a general purpose programming language”
+>>> len(s)
+48
+>>> s[0]
+'p'
+>>> s[0:9]
+'python is'
+>>> s[13:20]
+'eneral '
+>>> s[13:] 
+'eneral purpose programming language’
+>>> s[:13]
+'python is a g'
+>>> s[-1]
+'g'
+>>> s[-5]
+'m'
+>>> s[-5:]
+‘uage’
+>>> s[-10:]
+‘g language'
+
+>>> s='python'
+>>> len(s)
+6
+>>> s[0]
+'p'
+>>> s[1]
+'y'
+>>> s[-1]
+'n'
+>>> s[-2]
+'o'
+>>> for var in s:
+        print(var)
+        print('---------')
+
+p
+---------
+y
+---------
+t
+---------
+h
+---------
+o
+---------
+n
+---------
+>>>
