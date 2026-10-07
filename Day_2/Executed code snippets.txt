@@ -1,0 +1,366 @@
+DAY 2 : Executed code snippets
+
+>>> s = “Hello”
+>>> s[0]
+‘H’
+>>>s[-1]
+‘o’
+>>>s[-1] = “X”
+Traceback (most recent call last):
+     File “<python-input-31>”, line 1, in <module>
+    s[-1] = “X”
+
+>>> # To add new data to an existing list
+>>> L = ['D1','D2','D3']
+>>> len(L)
+3
+>>> L
+['D1', 'D2', 'D3']
+>>> L.append('D4')
+>>> L.append(45.32)
+>>> L.append(True)
+>>> L
+['D1', 'D2', 'D3', 'D4', 45.32, True]
+>>> len(L)
+6
+>>> L.insert(1,"emp.csv")
+>>> L
+['D1', 'emp.csv', 'D2', 'D3', 'D4', 45.32, True]
+>>> L.insert(8, "/var/log") # works like append operation
+>>> L
+['D1', 'emp.csv', 'D2', 'D3', 'D4', 45.32, True, '/var/log']
+>>> L[7]
+'/var/log'
+
+>>> s = '101,ram,sales,pune,1000'
+>>> len(s)
+23
+>>> s.split(',')
+['101', 'ram', 'sales', 'pune', '1000']
+>>> s = '101:ram:sales:pune:1000'
+>>> s.split(':')
+['101', 'ram', 'sales', 'pune', '1000']
+>>> s = '101,ram,sales:pune:1000'
+>>> s.split(',')
+['101', 'ram', 'sales:pune:1000']
+>>> s.split(':')
+['101,ram,sales', 'pune', '1
+>>> v1, v2, v3 = 10, 20, 4.3
+>>> v1, v2, v3
+(10, 20, 4.3)
+>>> v1, v2, v3 = 10, 20, 4.3, 56
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    v1, v2, v3 = 10, 20, 4.3, 56
+    ^^^^^^^^^^
+ValueError: too many values to unpack (expected 3, got 4)
+>>> v1, v2, v3, v4, v5 = 10, 20, 4.3, 56
+Traceback (most recent call last):
+  File "<python-input-3>", line 1, in <module>
+    v1, v2, v3, v4, v5 = 10, 20, 4.3, 56
+    ^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+>>> file_info = ['emp.csv', 25, 'root', '5KB', '/var/log']
+>>> fname = file_info[0]
+>>> findex = file_info[1]
+>>> fuser = file_info[2]
+>>> fsize = file_info[3]
+>>> fpath = file_info[4]
+>>> 
+>>> fname, findex, fuser, fsize, fpath
+('emp.csv', 25, 'root', '5KB', '/var/log')
+>>> f6,f7,f8,f9,f10 = file_info ## multiplw initialisation
+>>> f6,f7,f8,f9,f10
+('emp.csv', 25, 'root', '5KB', '/var/log')
+
+>>> T = ((12, 45, '23', 'dwdwd', 45.44), (3242, 344.4342,'\
+232', 34, 'dwdwdwwd'))
+>>> T[0]
+(12, 45, '23', 'dwdwd', 45.44)
+>>> T[1]
+(3242, 344.4342, '232', 34, 'dwdwdwwd')
+>>> T[0][0]
+12
+>>> T[0][3]
+'dwdwd'
+>>> T[1][3]
+34
+>>> T[1].index(344.4342
+... )
+1
+>>> T[0].index(45.44)
+4
+
+>>> Config_files = ("/etc/f1","/etc/f2","/etc/f3")
+>>> list(Config_files)
+['/etc/f1', '/etc/f2', '/etc/f3']
+>>> tv = list(Config_files)
+>>> tv.pop(0)
+'/etc/f1'
+>>> tv
+['/etc/f2', '/etc/f3']
+>>> tv[0] = "C:\\program\\f2.cfg"
+>>> tv.append("C:\\f2.conf")
+>>> tv
+['C:\\program\\f2.cfg', '/etc/f3', 'C:\\f2.conf']
+>>> tuple(tv)
+('C:\\program\\f2.cfg', '/etc/f3', 'C:\\f2.conf')
+>>> Config_file = tuple(tv)
+>>> Config_file
+('C:\\program\\f2.cfg', '/etc/f3', 'C:\\f2.conf')
+
+>>> L1 = ['win10','win11','win2k']
+>>> L2 = ['RHL5','RHL6']
+>>> L = [ L1,L2 ]
+>>> L
+[['win10', 'win11', 'win2k'], ['RHL5', 'RHL6']]
+>>>
+>>> len(L)
+2
+>>> L[0]
+['win10', 'win11', 'win2k']
+>>> L[1]
+['RHL5', 'RHL6']
+>>> L[0][0]
+'win10'
+>>> L[0][1]
+'win11'
+>>> L[0][2]
+'win2k'
+>>> L[0][1] = "Win12" # we can modify
+>>> L
+[['win10', 'Win12', 'win2k'], ['RHL5', 'RHL6']]
+>>> # L.append("RHL7")
+>>> L[1].append("RHL7")
+>>> L
+[['win10', 'Win12', 'win2k'], ['RHL5', 'RHL6', 'RHL7']]
+>>> L.append(["OL5","OL6","OL7","OL8"])
+>>> L
+[['win10', 'Win12', 'win2k'], ['RHL5', 'RHL6', 'RHL7'], ['OL5', 'OL6', 'OL7', 'OL8']]
+>>> L = [("Winx10","winx11"),("RHL5","RHL6","RHL7"),("OL5","OL6")] # list of tuple
+>>> type(L)
+<class 'list'>
+>>> type(L[0])
+<class 'tuple'>
+>>> type(L[1])
+<class 'tuple'>
+>>> L.append(("DEB11","DEB12")) # adding tuple
+>>> L
+[('Winx10', 'winx11'), ('RHL5', 'RHL6', 'RHL7'), ('OL5', 'OL6'), ('DEB11', 'DEB12')]
+>>> # list.extend(iterable)
+>>> costs = [100,200,300,400,500]
+>>> costs.extend([4,5,6])
+>>> costs
+[100, 200, 300, 400, 500, 4, 5, 6]
+>>> costs = [100,200,300,400,500]
+>>> costs.append([4,5,6])
+>>> costs
+[100, 200, 300, 400, 500, [4, 5, 6]]
+>>> L = ['D1','D2',['D3','D4','D5'],('D6','D7'),[[['D8','D9']]],'D10']
+>>> print(L)
+['D1', 'D2', ['D3', 'D4', 'D5'], ('D6', 'D7'), [[['D8', 'D9']]], 'D10']
+>>>
+>>> len(L)
+6
+>>> L[2]
+['D3', 'D4', 'D5']
+>>>
+>>> L[2][0]
+'D3'
+>>> L[2][1]
+'D4'
+>>> L[3]
+('D6', 'D7')
+>>>
+>>> L[3][0]
+'D6'
+>>> L[3][1]
+'D7'
+>>> L[4]
+[[['D8', 'D9']]]
+>>>
+>>> L[4][0]
+[['D8', 'D9']]
+>>> L[4][0][0]
+['D8', 'D9']
+>>> L[4][0][0][0]
+'D8'
+>>> L[4][0][0][1]
+'D9'
+>>>
+
+>>> # Tuple of List
+>>> T=([],[])
+>>> len(T)
+2
+>>> type(T)
+<class 'tuple'>
+>>>
+>>> type(T[0])
+<class 'list'>
+>>>
+>>> T[0].append('D1')
+>>> T[0].append('D2')
+>>> T[0].append('D3')
+>>> T[0].append(10)
+>>> T[0].append(11
+... )
+>>> T[0].append(12)
+>>> len(T)
+2
+>>> len(T[0])
+6
+>>> T
+(['D1', 'D2', 'D3', 10, 11, 12], [])
+>>> T[0]
+['D1', 'D2', 'D3', 10, 11, 12]
+>>> T[0][2]
+'D3'
+>>> T[0][2] = 'Data-3'
+>>> T
+(['D1', 'D2', 'Data-3', 10, 11, 12], [])
+>>> s = {10,20,'K1','V1','K1',10,20,30,40,10}
+>>> type(s)
+<class 'set'>
+>>> len(s)
+6
+>>> s
+{20, 'K1', 'V1', 40, 10, 30}
+>>> file_contents=['data1','data2','data1','data1','data2','data1','data1']
+>>> len(file_contents)
+7
+>>> set(file_contents)
+{'data2', 'data1'}
+>>> list(set(file_contents))
+['data2', 'data1']
+>>> s={None,10,20}
+>>> s
+{None, 10, 20}
+>>> s={[]}
+Traceback (most recent call last):
+  File "<python-input-535>", line 1, in <module>
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+>>> s.add(30)
+>>> s.add(40)
+>>> s.add('data1')
+>>> s
+{'data1', 40, 10, 20, 30}
+>>> s.update(['D1','D2'])
+>>> s.update(('D1',10,45))
+>>> s
+{'D1', 'data1', 40, 10, 45, 'D2', 20, 30}
+>>> s.remove(40)
+>>> s
+{'D1', 'data1', 10, 45, 'D2', 20, 30}
+>>> s.discard(10)
+>>> s
+{'D1', 'data1', 45, 'D2', 20, 30}
+>>> s.discard(10)
+>>> s
+{'D1', 'data1', 45, 'D2', 20, 30}
+>>> s.remove(40)
+Traceback (most recent call last):
+  File "<python-input-562>", line 1, in <module>
+    s.remove(40)
+    ~~~~~~~~^^^^
+KeyError: 40
+>>> s.pop(45)
+Traceback (most recent call last):
+  File "<python-input-564>", line 1, in <module>
+    s.pop(45)
+    ~~~~~^^^^
+TypeError: set.pop() takes no arguments (1 given)
+>>> s.pop()
+'D1'
+>>> s
+{'data1', 45, 'D2', 20, 30}
+>>> s = {10,20,'K1','V1','K1',10,20,30,40,10}
+>>> type(s)
+<class 'set'>
+>>> len(s)
+6
+>>> s
+{20, 'K1', 'V1', 40, 10, 30}
+>>> file_contents=['data1','data2','data1','data1','data2','data1','data1']
+>>> len(file_contents)
+7
+>>> set(file_contents)
+{'data2', 'data1'}
+>>> list(set(file_contents))
+['data2', 'data1']
+>>> s={None,10,20}
+>>> s
+{None, 10, 20}
+>>> s.add(30)
+>>> s.add(40)
+>>> s.add('data1')
+>>> s
+{'data1', 40, 10, 20, 30}
+>>> s.update(['D1','D2'])
+>>> s.update(('D1',10,45))
+>>> s
+{'D1', 'data1', 40, 10, 45, 'D2', 20, 30}
+>>> s.remove(40)
+>>> s
+{'D1', 'data1', 10, 45, 'D2', 20, 30}
+>>> s.discard(10)
+>>> s
+{'D1', 'data1', 45, 'D2', 20, 30}
+>>> s.discard(10)
+>>> f1=['data1','data2','data3','data4']
+>>> f2=['data5','data2','data6','data4']
+>>> set(f1) | set(f2) # union
+{'data1', 'data5', 'data4', 'data3', 'data2', 'data6'}
+>>> set(f1).union(set(f2)) # union
+{'data1', 'data5', 'data4', 'data3', 'data2', 'data6'}
+>>> set(f1).intersection(set(f2)) # intersection
+{'data2', 'data4'}
+>>> set(f1) & set(f2) # intersection
+{'data2', 'data4'}
+>>> set(f1) - set(f2)
+{'data3', 'data1'}
+>>> set(f1) ^ set(f2)
+{'data1', 'data5', 'data3', 'data6'}
+
+>>> # range() - generate sequence of numbers
+>>> range(5)
+range(0, 5)
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+>>> list(range(3,9))
+[3, 4, 5, 6, 7, 8]
+>>> list(range(3,15,2))
+[3, 5, 7, 9, 11, 13]
+>>> list(range(3,15,-2))
+[]
+>>> list(range(15,3,-2))
+[15, 13, 11, 9, 7, 5]
+>>> range(5)
+range(0, 5)
+>>>
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+>>>
+>>> # range(N)
+>>> for i in range(5):
+...     print('i value:',i)
+i value: 0
+i value: 1
+i value: 2
+i value: 3
+i value: 4
+>>> # Process 10 customer records 1 to 10
+>>> for customer_id in range(1,11):
+...     print("processing customer:",customer_id)
+...
+processing customer: 1
+processing customer: 2
+processing customer: 3
+processing customer: 4
+processing customer: 5
+processing customer: 6
+processing customer: 7
+processing customer: 8
+processing customer: 9
+processing customer: 10
+
