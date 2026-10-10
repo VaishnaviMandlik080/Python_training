@@ -1,0 +1,8 @@
+Interface=eth1
+Type=ethernet
+onboot=yes
+bootproto=static
+DOMAIN=example.com
+IPADDR=192.168.1.10
+PREFIX=24
+DNS1=122.33.344.555

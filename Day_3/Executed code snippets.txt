@@ -1,0 +1,197 @@
+DAY 3: Executed code snippets
+
+>>> L = ["oracle23ai", "oracle26ai", "oracledb", "oracle_cx", "mysql"]
+>>> L.index("oracle26ai")
+1
+>>> index_number =  L.index("oracle26ai")
+>>> L[index_number] = 'oracle28AI'
+>>> L
+['oracle23ai', 'oracle28AI', 'oracledb', 'oracle_cx', 'mysql']
+>>> type(True)
+<class 'bool'>
+>>> type(False)
+<class 'bool'>
+>>> n=45
+>>> float(n)
+45.0
+>>> str(n)
+'45'
+>>> bool(n)
+True
+>>> n = 0
+>>> bool(n)
+False
+>>> print(bool(0), bool(0.0), bool(''), bool(None), bool([]), bool(()), bool({}))
+False False False False False False False
+>>> if(0):
+...     print("Yes")
+... else:
+...     print("Empty")
+...
+Empty
+>>> if(-234214213223424234):
+...     print("Yes")
+... else:
+...     print("False block")
+...
+Yes
+>>> name = input("Enter your name:")
+Enter your name:
+>>> name
+''
+>>> len(name) == 0
+True
+>>> if(len(name) == 0):
+...     print("Empty string")
+... else:
+...     print(f"Hello {name}")
+...
+Empty string
+>>> name = input("Enter your name:")
+Enter your name:Arpit
+>>> if (name):
+...     print(f"Hello {name}")
+... else:
+...     print("Empty string")
+...
+Hello Arpit
+>>> print(bool(''), bool('sadsadwdw'))
+False True
+
+Go to the folder with file using cd
+
+>>> fobj = open('emp.csv','r')
+>>> fobj.read()
+'eid,ename,edept,ecity,ecost\n101,raj,sales,pune,1000\n102,leo,prod,bglore,2301\n230,raj,prod,pune,2300\n450,shan,sales,bglore,3401\n542,anu,HR,mumbai,4590\n321,bibu,sales,hyd,5419\n651,ram,hr,bglore,3130\n541,leo,admin,chennai,4913\n652,karthik,prod,bglore,3490\n742,anu,sales,mumbai,5901\n821,shan,prod,hyd,6000\n151,ram,prod,bglore,3000\n241,vijay,admin,chennai,3450\n252,anish,Hr,mumbai,5490'
+>>> fobj = open('emp.csv','r')
+>>> fobj.readlines()
+['eid,ename,edept,ecity,ecost\n', '101,raj,sales,pune,1000\n', '102,leo,prod,bglore,2301\n', '230,raj,prod,pune,2300\n', '450,shan,sales,bglore,3401\n', '542,anu,HR,mumbai,4590\n', '321,bibu,sales,hyd,5419\n', '651,ram,hr,bglore,3130\n', '541,leo,admin,chennai,4913\n', '652,karthik,prod,bglore,3490\n', '742,anu,sales,mumbai,5901\n', '821,shan,prod,hyd,6000\n', '151,ram,prod,bglore,3000\n', '241,vijay,admin,chennai,3450\n', '252,anish,Hr,mumbai,5490']
+>>> fobj.readlines()
+[]
+>>> fobj = open('emp.csv','r')
+>>> fobj.read()
+'eid,ename,edept,ecity,ecost\n101,raj,sales,pune,1000\n102,leo,prod,bglore,2301\n230,raj,prod,pune,2300\n450,shan,sales,bglore,3401\n542,anu,HR,mumbai,4590\n321,bibu,sales,hyd,5419\n651,ram,hr,bglore,3130\n541,leo,admin,chennai,4913\n652,karthik,prod,bglore,3490\n742,anu,sales,mumbai,5901\n821,shan,prod,hyd,6000\n151,ram,prod,bglore,3000\n241,vijay,admin,chennai,3450\n252,anish,Hr,mumbai,5490'
+>>> fobj.read()
+''
+>>> open('r1.log','w')
+<_io.TextIOWrapper name='r1.log' mode='w' encoding='cp1252'>
+>>> open('r1.log','w')
+<_io.TextIOWrapper name='r1.log' mode='w' encoding='cp1252'>
+>>> # wobj.write("SingleString\n")
+>>> wobj.write("data1\n")
+6
+>>> wobj.write("sample data\n")
+12
+>>> wobj.write(3242432)
+Traceback (most recent call last):
+  File "<python-input-13>", line 1, in <module>
+    wobj.write(3242432)
+    ~~~~~~~~~~^^^^^^^^^
+TypeError: write() argument must be str, not int
+>>> wobj.write("3242432")
+7
+>>> cost = 3424.32
+>>> wobj.write("cost\n")
+5
+>>> wobj.write(str(cost)+"\n")
+8
+>>> ename = "Raj"
+>>> dept = "sales"
+>>> wobj.write(f"Emp name is:{ename} working dept:{dept}\n")
+35
+>>> wobj.close()
+>>> L=[10,20,30,40,50,60,70,80]
+>>> L.append(5)
+>>> L
+[10, 20, 30, 40, 50, 60, 70, 80, 5]
+>>> # def append(arg):
+>>> L.pop()
+5
+>>> L.pop(2)
+30
+>>> def f1(*a):
+...     print(type(a))
+...     print(a)
+...
+>>> f()
+>>> L = ['csh','psh','bash','zsh','ash','tcsh']
+>>> L.sort()
+>>> s = "hello"
+>>> s.upper()
+'HELLO'
+>>> s
+'hello'
+>>>
+>>> L=[]
+>>> L
+[]
+>>>
+>>> L.append("D1")
+>>> L
+['D1']
+>>>
+>>> def f1(a):
+...     a.append("Data1")
+...
+>>> L=[]
+>>> L=[10,20,30]
+>>> L
+[10, 20, 30]
+>>> f1(L)
+>>> L
+[10, 20, 30, 'Data1']
+>>> a = 10
+>>> b = 10
+>>> a is b
+True
+>>> a is not b
+False
+>>> a is b
+True
+>>> a
+[10, 20, [30, 40], 50]
+>>> b
+[10, 20, [30, 40], 50]
+>>> a.append(60)
+>>> b
+[10, 20, [30, 40], 50, 60]
+>>> a
+[10, 20, [30, 40], 50, 60]
+
+
+Shallow copy
+
+>>> a = [10,20,[30,40],50]
+>>>
+>>> import copy
+>>> b = copy.copy(a)
+>>> a is b
+False
+>>> a
+[10, 20, [30, 40], 50]
+>>> b
+[10, 20, [30, 40], 50]
+>>> a.append(60)
+>>> a
+[10, 20, [30, 40], 50, 60]
+>>> b
+[10, 20, [30, 40], 50]
+>>> a[2] is b[2]
+True
+>>> a[2].append(45)
+>>> b
+[10, 20, [30, 40, 45], 50]
+
+DeepCopy
+
+>>> a = [10,20,[30,40],50]
+>>> b = copy.deepcopy(a) 
+>>> a is b
+False
+>>> a[2] is b[2]
+False
+>>> a.append(60)
+>>> a[2].append(45)
+>>> b
+[10, 20, [30, 40], 50]
+
