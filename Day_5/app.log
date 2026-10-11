@@ -1,0 +1,3 @@
+2026-10-09 10:20:02 - INFO - Application started
+2026-10-09 10:20:02 - WARNING - This is a warning message for missing email
+2026-10-09 10:20:02 - ERROR - This is an error message for failed login or this is a critical issue

@@ -1,0 +1,89 @@
+>>> n = 25
+>>> assert n > 15, "n value must be at least 15"
+>>> 25 > 15
+True
+>>> n = 10
+>>> 10 > 15
+False
+>>> assert n > 15, "n value must be at least 15"
+Traceback (most recent call last):
+  File "<python-input-5>", line 1, in <module>
+    assert n > 15, "n value must be at least 15"
+           ^^^^^^
+AssertionError: n value must be at least 15
+>>> def f1(a):
+...     def f2(*arg,**kwargs): # wrapper
+...         a()
+...     return f2
+...
+>>> #
+>>> # @decoratorFunction
+>>> # def app_code():
+>>> #     .....
+>>> #     .....
+>>> # app_code()
+>>> # ------------------------ app_code = f1(app_code) -> app_code()
+>>> #
+>>>
+>>> @f1
+... def app1():
+...     print("App1 code")
+>>> @f1
+... def app2():
+...     print("App2 Code")
+>>> @f1
+... def app3():
+...     print("App3 code")
+>>> app2()
+App2 Code
+>>> app1()
+App1 code
+>>> app3()
+App3 code
+>>> import requests
+>>> requests.get('https://www.google.com')
+<Response [200]>
+>>> r = requests.get('https://www.google.com')
+>>> r.status_code
+200
+>>> assert r.status_code == 200
+>>> URL="https://www.google.com"
+>>>
+>>> r = requests.get(URL)
+>>> r.status_code
+200
+>>> r.headers['Content-Type']
+'text/html; charset=ISO-8859-1'
+>>> web_page = r.text
+>>> type(web_page)
+<class 'str'>
+>>> len(web_page)
+86975
+>>> with open('test.html','w') as wobj:
+...     wobj.write(web_page)
+...
+86975
+>> re.search("^sales.pune$","sales,pune")
+<re.Match object; span=(0, 10), match='sales,pune'>
+>>>
+>>> re.search("^sales.pune$","sales|pune")
+<re.Match object; span=(0, 10), match='sales|pune'>
+>>>
+>>> re.search("^sales.pune$","sales pune")
+<re.Match object; span=(0, 10), match='sales pune'>
+>>>
+>>> re.search("^sales.pune$","salespune")
+>>>
+>>> re.search("^sales.pune$","sales  pune")
+>>>
+>>> re.sub("sales","QA","101,raj,sales,pune")
+'101,raj,QA,pune'
+>>>
+>>> re.sub("sales","QA","101,raj,admin,pune")
+'101,raj,admin,pune'
+>>>
+>>> s="101,raj,sales,pune"
+>>> s.split(",")
+['101', 'raj', 'sales', 'pune']
+>>> re.split(",",s)
+['101', 'raj', 'sales', 'pune']
