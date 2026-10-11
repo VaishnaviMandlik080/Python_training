@@ -1,0 +1,167 @@
+DAY - 4 - Executed code snippets
+
+>>> L = []
+>>> def f1(a):
+...     return a+100
+...
+>>> for var in [10,20,30,40,50]:
+...     r = f1(var)
+...     L.append(r)
+...
+>>> print(L)
+[110, 120, 130, 140, 150]
+>>>
+>>> list(map(lambda a:a+100,[10,20,30,40,50]))
+[110, 120, 130, 140, 150]
+>>> d={}
+>>>
+>>> d['K1'] = list(map(lambda a:a+100,[10,20,30,40,50]))
+>>> d
+{'K1': [110, 120, 130, 140, 150]}
+>>> def f1(a1,a2):
+...     return a1+a2
+...
+>>> f1(10,20)
+30
+>>> f2 = lambda a1,a2:a1+a2
+>>> f2(10,20)
+30
+>>> f3('hello')
+'HELLO'
+>>> f4 = lambda a:a.upper()
+>>> f4('hello')
+'HELLO'
+>>> f5 = lambda a,b:a >b
+>>> f5(10,20)
+False
+>>> f5(100,20)
+True
+>>> f6 = lambda a: 'sales' in a
+>>> f6('101,raj,sales,pune')
+True
+>>> def fx(a):
+...     if(a > 100):
+...         return a + 100
+...     elif(a < 100):
+...         return a + 50
+...     else:
+...         return 1000
+...
+>>> fx(150)
+250
+>>> fx(90)
+140
+>>> f6 = lambda a:fx(a)
+>>> f6(150)
+250
+>>> f6(90)
+140
+>>> emps = [('raj',5000),('kumar',70000),('anil',45000)]
+>>> sorted(emps)
+[('anil', 45000), ('kumar', 70000), ('raj', 5000)]
+>>> sorted(emps)
+[('anil', 45000), ('kumar', 70000), ('raj', 5000)]
+>>> sorted(emps,key=lambda a:a[1])
+[('raj', 5000), ('anil', 45000), ('kumar', 70000)]
+>>> L = []
+>>> for var in [10,20,30,40,50]:
+...     r = var + 100
+...     L.append(r)
+...
+>>> L
+[110, 120, 130, 140, 150]
+>>> [var+100 for var in [10,20,30,40,50]]
+[110, 120, 130, 140, 150]
+>> [var+100 if var >30 else var+500 for var in [10,20,30,40,50]]
+[510, 520, 530, 140, 150]
+>>> {var: var+100 for var in [10,20,30,40,50]}
+{10: 110, 20: 120, 30: 130, 40: 140, 50: 150}
+>>> emps=[{"name":"Raj","salary":50000},{"name":"Kumar","salary":70000},{"name":"Anu\","salary":60000}]
+>>>
+>>> for emp in emps:
+...     print(emp)
+...
+{'name': 'Raj', 'salary': 50000}
+{'name': 'Kumar', 'salary': 70000}
+{'name': 'Anu', 'salary': 60000}
+>>> {v+100 for v in nos}   # set
+{101, 102, 103, 104, 105}  
+>>> obj = map(lambda a:a + 100,[10,20,30,40,50])
+>>> for var in obj:
+...     print(var)
+...
+110
+120
+130
+140
+150
+>>> obj = map(lambda a:a + 100,[10,20,30,40,50])
+>>> next(obj)
+110
+>>> next(obj)
+120
+>>> next(obj)
+130
+>>> next(obj)
+140
+>>> next(obj)
+150
+>>> list(map(lambda a:a + 100,[10,20,30,40,50]))
+[110, 120, 130, 140, 150]
+>>> list(map(lambda a:a >25,[10,20,30,40,50]))
+[False, False, True, True, True]
+>>> list(filter(lambda a:a >25,[10,20,30,40,50]))
+[30, 40, 50]
+>>> import functools
+>>> functools.reduce(lambda a,b:a+b,L)
+150
+>>> class Product:
+...     pid = 101
+...
+>>> class Customer(Product):
+...     cname = 'cusA'
+...
+>>> obj = Customer()
+>>> obj.pid
+101
+>>> obj.cname
+'cusA'
+>>> class A:
+...     pid = 101
+...
+>>> class B(A):
+...     pid = 1  # process id (PID)
+...     pname = 'systemd'
+...
+>>> obj = B()
+>>> obj.pid
+1
+>>> obj.pid
+1
+>>> class B(A):
+...     v = A.pid
+...     pid = 1
+...     pname = 'systemD'
+...
+>>> obj = B()
+>>> obj.v
+101
+>>> obj.pid
+1
+>>> obj.pname
+'systemD'
+>>>
+>>>
+>>> class A:
+...     def display(self):
+...         print("Display Customer records")
+...
+>>> class B(A):
+...     def display(self):
+...         print("Display list of files")
+...         super().display() # Calling parent class display method
+...
+>>> obj = B()
+>>> obj.display()
+Display list of files
+Display Customer recordds
