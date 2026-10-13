@@ -1,0 +1,27 @@
+============================================================
+               OPERATIONAL LOG MONITORING REPORT
+============================================================
+--- OVERALL METRICS AND HEALTH STATUS ---
+ Total lines Read: 100000
+ Successfully parsed: 99820 (99.82)
+ Malformed/Skipped lines: 180
+ Total Warnings: 4350
+ Total Errors: 10770
+------------------------------------------------------------
+--- LOG LEVEL DISTRIBUTION ---
+ ERROR: 10770
+ INFO: 84700
+ WARNING: 4350
+============================================================
+--- TOP RECURRING WARNINGS ---
+ 1. cache: Redis key expired for session: 2250
+ 2. disk: Disk usage above 80 percent: 1300
+ 3. network: Transient retry on upstream call: 800
+============================================================
+--- TOP RECURRING ERRORS ---
+ 1. db_pool: Connection timeout reached: 4120
+ 2. payment: Gateway rejected transaction 504: 3040
+ 3. auth: Token signature expired: 1510
+ 4. web: Internal server error 500: 1200
+ 5. queue: Message broker unreachable: 900
+============================================================
