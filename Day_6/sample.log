@@ -1,6 +1,0 @@
-2026-03-31 10:00:01 [INFO] [auth] User login successful
-2026-03-31 10:00:05 [WARNING] [cache] Cache miss for key user_101
-2026-03-31 10:00:10 [ERROR] [db_pool] Connection timeout reached
-2026-03-31 10:00:15 [ERROR] [db_pool] Connection timeout reached
-Corrupted line that does not conform to regex
-2026-03-31 10:00:20 [ERROR] [payment] Gateway rejected card ending in 4412
