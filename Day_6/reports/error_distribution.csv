@@ -1,0 +1,16 @@
+Log Level,Count
+ERROR,10770
+INFO,84700
+WARNING,4350
+
+Top Warnings,Count
+cache: Redis key expired for session,2250
+disk: Disk usage above 80 percent,1300
+network: Transient retry on upstream call,800
+
+Top Errors,Count
+db_pool: Connection timeout reached,4120
+payment: Gateway rejected transaction 504,3040
+auth: Token signature expired,1510
+web: Internal server error 500,1200
+queue: Message broker unreachable,900

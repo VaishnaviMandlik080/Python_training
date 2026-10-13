@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operational Log Monitoring Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+  header { padding: 24px 32px; background: #1e293b; border-bottom: 1px solid #334155; }
+  header h1 { margin: 0; font-size: 20px; }
+  header p { margin: 4px 0 0; color: #94a3b8; font-size: 13px; }
+  main { padding: 24px 32px; max-width: 1100px; margin: 0 auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 18px; }
+  .card-value { font-size: 26px; font-weight: 700; }
+  .card-label { color: #94a3b8; font-size: 13px; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+  .panel { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 18px; }
+  .panel h2 { margin: 0 0 12px; font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid #334155; }
+  th { color: #94a3b8; font-weight: 600; }
+  td:last-child, th:last-child { text-align: right; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Operational Log Monitoring Dashboard</h1>
+  <p>Generated 2026-10-12 12:07:44</p>
+</header>
+<main>
+  <div class="cards"><div class="card"><div class="card-value">100000</div><div class="card-label">Total Lines</div></div><div class="card"><div class="card-value">99820 (99.82%)</div><div class="card-label">Parsed</div></div><div class="card"><div class="card-value">180</div><div class="card-label">Skipped</div></div><div class="card"><div class="card-value">4350</div><div class="card-label">Warnings</div></div><div class="card"><div class="card-value">10770</div><div class="card-label">Errors</div></div></div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Log Level Distribution</h2>
+      <canvas id="levelChart"></canvas>
+    </div>
+    <div class="panel">
+      <h2>Top Recurring Errors</h2>
+      <table><thead><tr><th>#</th><th>Error</th><th>Count</th></tr></thead>
+      <tbody><tr><td>1</td><td>db_pool: Connection timeout reached</td><td>4120</td></tr><tr><td>2</td><td>payment: Gateway rejected transaction 504</td><td>3040</td></tr><tr><td>3</td><td>auth: Token signature expired</td><td>1510</td></tr><tr><td>4</td><td>web: Internal server error 500</td><td>1200</td></tr><tr><td>5</td><td>queue: Message broker unreachable</td><td>900</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Top Recurring Warnings</h2>
+      <table><thead><tr><th>#</th><th>Warning</th><th>Count</th></tr></thead>
+      <tbody><tr><td>1</td><td>cache: Redis key expired for session</td><td>2250</td></tr><tr><td>2</td><td>disk: Disk usage above 80 percent</td><td>1300</td></tr><tr><td>3</td><td>network: Transient retry on upstream call</td><td>800</td></tr></tbody></table>
+    </div>
+  </div>
+</main>
+<script>
+  const data = {"labels": ["ERROR", "INFO", "WARNING"], "values": [10770, 84700, 4350]};
+  new Chart(document.getElementById("levelChart"), {
+    type: "bar",
+    data: {
+      labels: data.labels,
+      datasets: [{ label: "Count", data: data.values, backgroundColor: "#38bdf8" }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: "#94a3b8" }, grid: { color: "#334155" } },
+        y: { ticks: { color: "#94a3b8" }, grid: { color: "#334155" }, beginAtZero: true }
+      }
+    }
+  });
+</script>
+</body>
+</html>
